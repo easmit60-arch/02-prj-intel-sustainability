@@ -5,17 +5,42 @@ html {
   scroll-behavior: smooth;  /* Makes all anchor links scroll smoothly */
 }
 
-.header {
+/* Header styling - centers logo and text */
+header {
   background-color: #f8f9fa;  /* Light grey background */
-  padding: 20px;              /* Space inside the header */
-  text-align: center;         /* Centered text */
-  font-family: Arial, sans-serif; /* Font style */
+  padding: 40px 20px;         /* Space inside the header */
+  font-family: 'Inter', Arial, sans-serif; /* Modern font */
 }
 
-/* Logo styling - resize the SVG image */
+header h1 {
+  color: #0071c5;             /* Intel blue for title */
+  font-size: 2.5rem;          /* Large title */
+  margin: 20px 0 10px;        /* Space around title */
+  text-align: center;         /* Center the title */
+}
+
+header p {
+  color: #64748b;             /* Muted grey for subtitle */
+  max-width: 700px;           /* Keep text readable */
+  margin: 0 auto;             /* Center the paragraph */
+  line-height: 1.6;           /* Better readability */
+  text-align: center;         /* Center the text */
+}
+
+/* Logo styling - BIGGER and no centering constraint */
 .logo {
-  width: 150px;  /* Set width - SVG will scale perfectly */
-  height: auto;  /* Keep proportions correct */
+  width: 400px;         /* Much larger - 400px instead of 250px */
+  max-width: 95%;       /* Can use up to 95% of screen width */
+  height: auto;         /* Keep proportions correct */
+  display: block;       /* Block display */
+  margin: 0 0 20px 0;   /* No auto centering - just bottom margin */
+}
+
+/* Make logo smaller on mobile phones */
+@media (max-width: 768px) {
+  .logo {
+    width: 280px;       /* Bigger on phones too - was 180px */
+  }
 }
 
 /* Navigation link styling */
@@ -35,11 +60,44 @@ nav a:hover {
   border-radius: 5px;       /* Rounded corners */
 }
 
-/* Create a grid layout */
-.section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  /* 3 equal columns */
-  gap: 20px;                           /* Space between items */
+/* Create a grid layout for timeline cards */
+section {
+  display: grid;                           /* Use grid layout */
+  grid-template-columns: 1fr 1fr 1fr;      /* 3 equal columns */
+  gap: 20px;                               /* Space between cards */
+  padding: 40px 20px;                      /* Space around the grid */
+  max-width: 1200px;                       /* Maximum width */
+  margin: 0 auto;                          /* Center the grid */
+  
+  /* Show only 3 cards at a time with hidden scrollbar */
+  max-height: 385px;                       /* Limit height to show 1 row of 3 cards */
+  overflow-y: auto;                        /* Enable vertical scrolling */
+  overflow-x: hidden;                      /* Hide horizontal overflow */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+section::-webkit-scrollbar {
+  display: none;                           /* Completely hide scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+section {
+  scrollbar-width: none;                   /* Firefox */
+  -ms-overflow-style: none;                /* IE and Edge */
+}
+
+/* Make grid responsive on tablets */
+@media (max-width: 968px) {
+  section {
+    grid-template-columns: 1fr 1fr;        /* 2 columns on tablets */
+  }
+}
+
+/* Make grid single column on phones */
+@media (max-width: 600px) {
+  section {
+    grid-template-columns: 1fr;            /* 1 column on phones */
+  }
 }
 
 /* Timeline card styling - colored boxes */
@@ -49,6 +107,16 @@ section div {
   border-radius: 8px;         /* Rounded corners for modern look */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
   transition: all 0.3s;       /* Smooth animation for hover effects */
+}
+
+/* FIXED: Resize images inside cards so they fit properly */
+section div img {
+  width: 100%;                /* Image takes full width of card */
+  height: auto;               /* Keep image proportions */
+  border-radius: 4px;         /* Rounded corners on images */
+  margin-bottom: 10px;        /* Space below image */
+  object-fit: cover;          /* Make image fill space nicely */
+  max-height: 200px;          /* Prevent images from being too tall */
 }
 
 /* Card hover effect - makes card lift slightly */

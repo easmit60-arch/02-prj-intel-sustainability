@@ -1,1 +1,81 @@
 /* Add your CSS here */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;  /* Makes all anchor links scroll smoothly */
+}
+
+.header {
+  background-color: #f8f9fa;  /* Light grey background */
+  padding: 20px;              /* Space inside the header */
+  text-align: center;         /* Centered text */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+/* Logo styling - resize the SVG image */
+.logo {
+  width: 150px;  /* Set width - SVG will scale perfectly */
+  height: auto;  /* Keep proportions correct */
+}
+
+/* Navigation link styling */
+nav a {
+  color: #0071c5;           /* Intel blue color */
+  text-decoration: none;    /* Remove underline */
+  padding: 10px 15px;       /* Space around each link */
+  margin: 0 5px;            /* Space between links */
+  display: inline-block;    /* Make padding work properly */
+  transition: all 0.3s;     /* Smooth color change animation */
+}
+
+/* Navigation link hover effect - changes color when mouse moves over */
+nav a:hover {
+  color: #ffffff;           /* White text on hover */
+  background-color: #0071c5; /* Blue background on hover */
+  border-radius: 5px;       /* Rounded corners */
+}
+
+/* Create a grid layout */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /* 3 equal columns */
+  gap: 20px;                           /* Space between items */
+}
+
+/* Timeline card styling - colored boxes */
+section div {
+  background-color: #f0f8ff;  /* Light blue background - subtle and soft */
+  padding: 20px;              /* Space inside the card around the text */
+  border-radius: 8px;         /* Rounded corners for modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+  transition: all 0.3s;       /* Smooth animation for hover effects */
+}
+
+/* Card hover effect - makes card lift slightly */
+section div:hover {
+  background-color: #e6f3ff;  /* Slightly darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Bigger shadow on hover */
+  transform: translateY(-2px);  /* Lift card up 2 pixels */
+}
+
+/* Footer styling */
+footer {
+  background-color: #2c2c2c;  /* Dark grey background */
+  color: #ffffff;             /* White text */
+  text-align: center;         /* Center the text */
+  padding: 20px;              /* Space inside footer */
+  margin-top: 40px;           /* Space above footer */
+}
+
+/* Footer link styling */
+footer a {
+  color: #0071c5;             /* Intel blue for the link */
+  text-decoration: none;      /* Remove underline */
+  transition: color 0.3s;     /* Smooth color change */
+}
+
+/* Footer link hover effect */
+footer a:hover {
+  color: #4da6ff;             /* Lighter blue on hover */
+  text-decoration: underline; /* Add underline on hover */
+}

@@ -7,20 +7,20 @@ html {
 
 /* Header styling - centers logo and text */
 header {
-  background-color: #f8f9fa;  /* Light grey background */
+  background: linear-gradient(135deg, #0071c5 0%, #004a87 100%);  /* Blue gradient background */
   padding: 40px 20px;         /* Space inside the header */
   font-family: 'Inter', Arial, sans-serif; /* Modern font */
 }
 
 header h1 {
-  color: #0071c5;             /* Intel blue for title */
+  color: #ffffff;             /* White text for title */
   font-size: 2.5rem;          /* Large title */
   margin: 20px 0 10px;        /* Space around title */
   text-align: center;         /* Center the title */
 }
 
 header p {
-  color: #64748b;             /* Muted grey for subtitle */
+  color: #e6f3ff;             /* Light blue for subtitle */
   max-width: 700px;           /* Keep text readable */
   margin: 0 auto;             /* Center the paragraph */
   line-height: 1.6;           /* Better readability */

@@ -27,13 +27,13 @@ header p {
   text-align: center;         /* Center the text */
 }
 
-/* Logo styling - BIGGER and no centering constraint */
+/* Logo styling - centered in header */
 .logo {
   width: 400px;         /* Much larger - 400px instead of 250px */
   max-width: 95%;       /* Can use up to 95% of screen width */
   height: auto;         /* Keep proportions correct */
   display: block;       /* Block display */
-  margin: 0 0 20px 0;   /* No auto centering - just bottom margin */
+  margin: 0 auto 20px auto;   /* Centered horizontally with bottom margin */
 }
 
 /* Make logo smaller on mobile phones */
@@ -137,13 +137,13 @@ footer {
 
 /* Footer link styling */
 footer a {
-  color: #0071c5;             /* Intel blue for the link */
-  text-decoration: none;      /* Remove underline */
+  color: #4da6ff;             /* Lighter blue for better contrast */
+  text-decoration: underline; /* Underline for better accessibility */
   transition: color 0.3s;     /* Smooth color change */
 }
 
 /* Footer link hover effect */
 footer a:hover {
-  color: #4da6ff;             /* Lighter blue on hover */
-  text-decoration: underline; /* Add underline on hover */
+  color: #80c1ff;             /* Even lighter blue on hover */
+  text-decoration: underline; /* Keep underline on hover */
 }

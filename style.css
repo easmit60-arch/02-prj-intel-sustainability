@@ -29,8 +29,8 @@ header p {
 
 /* Logo styling - centered in header */
 .logo {
-  width: 400px;         /* Much larger - 400px instead of 250px */
-  max-width: 95%;       /* Can use up to 95% of screen width */
+  width: 100%;          /* Responsive - scales with container */
+  max-width: 400px;     /* Maximum size of 400px */
   height: auto;         /* Keep proportions correct */
   display: block;       /* Block display */
   margin: 0 auto 20px auto;   /* Centered horizontally with bottom margin */
@@ -39,7 +39,7 @@ header p {
 /* Make logo smaller on mobile phones */
 @media (max-width: 768px) {
   .logo {
-    width: 280px;       /* Bigger on phones too - was 180px */
+    max-width: 280px;   /* Smaller max size on phones */
   }
 }
 
